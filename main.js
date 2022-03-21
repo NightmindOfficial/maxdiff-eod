@@ -24,6 +24,7 @@ do {
     var balanced = checkForBalance();
     if (!balanced) { continue; }
     var orthogonal = checkForOrthogonality();
+    if (!orthogonal) { continue; }
 } while (!solutionFound);
 
 
