@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "cmatrix": "^0.2.0",
+    "prompt-sync": "^4.1.6"
+  }
+}
