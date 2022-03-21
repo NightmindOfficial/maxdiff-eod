@@ -1,5 +1,5 @@
 var verbose = true;
-var numberOfOptions = 8;
+var numberOfOptions = 24;
 var options = [];
 var cycle = 0;
 var solutionFound = false;
@@ -69,16 +69,16 @@ console.log("-Trying to solve combinations now.");
 
 // MAIN CYCLE
 do {
-    sleep(1000);
+    // sleep(1000);
     cycleThrough();
-    sleep(1000);
+    // sleep(1000);
     var balanced = checkForBalance();
     if (!balanced) { continue; }
-    sleep(1000);
+    // sleep(1000);
 
     var orthogonal = checkForOrthogonality();
     if (!orthogonal) { continue; }
-    sleep(1000);
+    // sleep(1000);
 
 } while (!solutionFound && moreCombinationsAvailable);
 

@@ -3,6 +3,10 @@ var v, b, r;
 var k = [3, 4, 5, 6];
 var m = 0;
 var verbose = false;
+var options = [];
+var optionSet = [];
+var numberOfPossibleCombinations;
+
 
 
 // Start of Loop
@@ -59,4 +63,38 @@ for (let i = 0; i < k.length - 1; i++) {
 
     console.log("\nSolution: With " + v + " options combined in pairs of " + k[i] + ", we will need " + b + " question blocks. Each item will be represented in " + r + " blocks, with each combination of two different options occurring exactly " + m + " times.");
 
+}
+
+
+// Next, ask the user if they want to continue (for now, only calculate for sets of 3)
+prompt("\nEnter if you would like to continue solving for sets of 3.");
+
+
+options = setOptions(v);
+console.log("\nCalculating.");
+console.log("Options: " + JSON.stringify(options) + " (" + v + " options)");
+console.log("Total possible combinations: " + getNumberOfPossibleCombinations(v, k[0]) + "\n\n");
+
+// Next, create a set of all possible combinations given the above attributes (like in secondAttempt.js, but all at the same time)
+
+
+
+
+
+
+function getNumberOfPossibleCombinations(n, intk) {
+    if (2 * intk > n) { k = n - intk }
+    var ergebnis = 1;
+    for (let i = 1; i <= intk; i++) {
+        ergebnis *= (n + 1 - i) / i
+    }
+    return ergebnis;
+}
+
+function setOptions(numberOfOptions) {
+    for (i = 1; i <= numberOfOptions; i++) {
+        options.push(i);
+
+    }
+    return options;
 }
