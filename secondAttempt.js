@@ -1,5 +1,5 @@
 var verbose = true;
-var numberOfOptions = 24;
+var numberOfOptions = 7;
 var options = [];
 var cycle = 0;
 var solutionFound = false;
